@@ -25,6 +25,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    compile ('com.github.zjutkz:MethodEraser:0.0.11') {
+        exclude module: 'jsr305'
+    }
 }
 
 //apply plugin: 'method-eraser'

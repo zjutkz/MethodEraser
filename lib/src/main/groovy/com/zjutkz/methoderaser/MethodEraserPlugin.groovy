@@ -47,7 +47,7 @@ class MethodEraserPlugin implements Plugin<Project> {
                     JavaCompile javaCompile = (JavaCompile) (variant.hasProperty('javaCompiler') ? variant.javaCompiler : variant.javaCompile)
                     javaCompile.doLast {
                         MethodEraserExtension extension = project.getExtensions().findByType(MethodEraserExtension.class)
-                        eraser.shrinkMethod(javaCompile.getDestinationDir().toString(), extension.packageName.replaceAll(".", "/"))
+                        eraser.shrinkMethod(javaCompile.getDestinationDir().toString(), extension.packageName)
                         eraser.releaseAllRes()
                     }
                 }

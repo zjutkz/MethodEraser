@@ -11,5 +11,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-
+    @Eraser
+    public int test() {
+        int a = 10;
+        a = a + 1;
+        return a;
+    }
 }
