@@ -39,7 +39,7 @@ class MethodEraserPlugin implements Plugin<Project> {
                 sdkDir = properties.getProperty('sdk.dir')
             }
             def androidJar = "${sdkDir}/platforms/${project.android.compileSdkVersion}/android.jar"
-            eraser.appendPatj(androidJar)
+            eraser.appendPath(androidJar)
 
             variants.all { variant ->
                 println("buildType: " + variant.getBuildType().name)
